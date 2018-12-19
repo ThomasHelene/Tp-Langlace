@@ -1,0 +1,33 @@
+//---------------------------------------------------------------------------
+
+#ifndef IHMH
+#define IHMH
+//---------------------------------------------------------------------------
+#include <System.Classes.hpp>
+#include <Vcl.Controls.hpp>
+#include <Vcl.StdCtrls.hpp>
+#include <Vcl.Forms.hpp>
+#include <IdBaseComponent.hpp>
+#include <IdComponent.hpp>
+#include <IdCustomTCPServer.hpp>
+#include <IdTCPServer.hpp>
+#include "Carte.h"
+#include <Vcl.ExtCtrls.hpp>
+//---------------------------------------------------------------------------
+class TForm1 : public TForm
+{
+__published:	// Composants gérés par l'EDI
+	TIdTCPServer *IdTCPServer1;
+	TShape *Shape1;
+	TLabel *LblTexte;
+	TLabel *LblTemp;
+	TButton *BtnConnexion;
+	TButton *BtnTemp;
+private:	// Déclarations utilisateur
+public:		// Déclarations utilisateur
+	__fastcall TForm1(TComponent* Owner);
+};
+//---------------------------------------------------------------------------
+extern PACKAGE TForm1 *Form1;
+//---------------------------------------------------------------------------
+#endif

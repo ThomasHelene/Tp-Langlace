@@ -1,0 +1,25 @@
+//---------------------------------------------------------------------------
+
+#ifndef CarteH
+#define CarteH
+//---------------------------------------------------------------------------
+
+class K8055
+{
+	private:
+		   int temperature;
+		   bool EtatConnexion;
+		   void LectureTemperature();
+	public:
+
+	K8055();
+	~K8055();
+
+	bool GetEtatConnexion();
+	int GetTemperature();
+};
+
+
+
+
+#endif

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2018/12/10 12:14:57.000.707,=C:\Users\Thelene\Documents\Embarcadero\Studio\Projets\Project1PCH1.h</Transaction>
+    <Transaction>2018/12/10 12:14:57.000.720,=C:\Users\Thelene\Documents\Embarcadero\Studio\Projets\Unit1.cpp</Transaction>
+    <Transaction>2018/12/10 12:15:05.000.063,C:\Users\Thelene\Documents\Embarcadero\Studio\Projets\Unit1.h=C:\Users\Thelene\Desktop\classes\Serveur tcp\Unit1.h</Transaction>
+    <Transaction>2018/12/10 12:15:05.000.063,C:\Users\Thelene\Documents\Embarcadero\Studio\Projets\Unit1.cpp=C:\Users\Thelene\Desktop\classes\Serveur tcp\Unit1.cpp</Transaction>
+    <Transaction>2018/12/10 12:15:05.000.063,C:\Users\Thelene\Documents\Embarcadero\Studio\Projets\Unit1.dfm=C:\Users\Thelene\Desktop\classes\Serveur tcp\Unit1.dfm</Transaction>
+    <Transaction>2018/12/10 12:15:06.000.947,C:\Users\Thelene\Documents\Embarcadero\Studio\Projets\Project1.cbproj=C:\Users\Thelene\Desktop\classes\Serveur tcp\Project1.cbproj</Transaction>
+    <Transaction>2018/12/10 12:15:06.000.220,C:\Users\Thelene\Documents\Embarcadero\Studio\Projets\Project1PCH1.h=C:\Users\Thelene\Desktop\classes\Serveur tcp\Project1PCH1.h</Transaction>
+    <Transaction>2018/12/10 12:15:14.000.597,C:\Users\Thelene\Desktop\classes\Serveur tcp\Unit1.cpp=C:\Users\Thelene\Desktop\classes\Serveur tcp\IHM.cpp</Transaction>
+    <Transaction>2018/12/10 12:15:14.000.597,C:\Users\Thelene\Desktop\classes\Serveur tcp\Unit1.h=C:\Users\Thelene\Desktop\classes\Serveur tcp\IHM.h</Transaction>
+    <Transaction>2018/12/10 12:15:14.000.597,C:\Users\Thelene\Desktop\classes\Serveur tcp\Unit1.dfm=C:\Users\Thelene\Desktop\classes\Serveur tcp\IHM.dfm</Transaction>
+    <Transaction>2018/12/10 12:15:41.000.480,=C:\Users\Thelene\Desktop\classes\Serveur tcp\Unit1.cpp</Transaction>
+    <Transaction>2018/12/10 12:15:48.000.637,C:\Users\Thelene\Desktop\classes\Serveur tcp\Unit1.cpp=C:\Users\Thelene\Desktop\classes\Serveur tcp\Serveur.cpp</Transaction>
+    <Transaction>2018/12/10 12:15:48.000.637,C:\Users\Thelene\Desktop\classes\Serveur tcp\Unit1.h=C:\Users\Thelene\Desktop\classes\Serveur tcp\Serveur.h</Transaction>
+  </Transactions>
+</BorlandProject>

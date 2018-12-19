@@ -1,0 +1,45 @@
+//---------------------------------------------------------------------------
+
+#pragma hdrstop
+
+#include "Carte.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+
+
+//Constructeur qui ouvre la connexion à la carte
+//--------------------------------------------------
+   K8055::K8055(int AdresseCarte)
+  {
+	  if(OpenDevice(AdresseCarte)) EtatConnexion=true;
+  }
+
+//Destructeur qui ferme la connexion à la carte
+//--------------------------------------------------
+   K8055::~K8055()
+  {
+      CloseDevice();
+  }
+
+//Méthode Privée qui récupère et traite la température envoyée par la carte
+//--------------------------------------------------
+  void K8055::LectureTemperature(int Canal)
+  {
+	   int buffer;
+	   buffer=ReadAnalogChannel(Canal);
+	   Temperature=(buffer*90);
+	   Temperature=(Temperature/255);
+	   Temperature=(Temperature-30);
+  }
+
+//Méthode Publique renvo
+//--------------------------------------------------
+  bool K8055::GetEtatConnexion()
+  {
+	   return EtatConnexion;
+  }
+  int K8055::GetTemperature(int Canal)
+  {
+			LectureTemperature(Canal);
+		   return Temperature;
+  }

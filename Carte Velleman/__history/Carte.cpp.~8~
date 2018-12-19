@@ -1,0 +1,29 @@
+//---------------------------------------------------------------------------
+
+#pragma hdrstop
+
+#include "Carte.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+
+   K8055::K8055(long AdresseCarte)
+  {
+	  OpenDevice(AdresseCarte);
+  }
+   K8055::~K8055()
+  {
+      CloseDevice();
+  }
+  void K8055::LectureTemperature()
+  {
+
+  }
+  bool K8055::GetEtatConnexion()
+  {
+	   return EtatConnexion;
+  }
+  int K8055::GetTemperature()
+  {
+			LectureTemperature();
+		   return Temperature;
+  }

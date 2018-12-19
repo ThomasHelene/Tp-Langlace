@@ -1,0 +1,49 @@
+//---------------------------------------------------------------------------
+
+#ifndef ServeurH
+#define ServeurH
+#include <vcl.h>
+#include <IdTCPServer.hpp>
+//---------------------------------------------------------------------------
+
+
+class Serveur
+{
+
+private:
+
+	bool EtatConnexionClient;
+	TIdTCPServer *TCP;
+	String RequeteClient;
+	String Reponse;
+
+public:
+
+
+	Serveur(TComponent* Owner,wchar_t*IP,int Port);
+	~Serveur();
+	bool  Lancer();
+	bool GetEtatClient();
+	void Retour(int Température);
+	void  __fastcall Execute(TIdContext* AContext);
+	void __fastcall Connect(TIdContext* AContext);
+    void __fastcall Serveur::Disconnect(TIdContext* AContext);
+
+
+
+
+
+
+
+
+
+
+};
+
+
+
+
+
+
+
+#endif
