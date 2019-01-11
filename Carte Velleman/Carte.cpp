@@ -5,7 +5,7 @@
 #include "Carte.h"
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
-
+// exemple
 
 //Constructeur qui ouvre la connexion à la carte
 //--------------------------------------------------
