@@ -13,7 +13,7 @@ __fastcall TForm1::TForm1(TComponent* Owner)
 	: TForm(Owner)
 {
   serv= new Serveur(this,EdtIp->Text.c_str(),EdtPort->Text.ToInt());
-  serv->GetTemperature(50);
+  serv->GetTemperature(30);
 }
 //---------------------------------------------------------------------------
 void __fastcall TForm1::BtnServClick(TObject *Sender)

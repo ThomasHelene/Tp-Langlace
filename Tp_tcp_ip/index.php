@@ -4,7 +4,7 @@
 	
 		if(isset($_POST["envoi"]))
 		{
-			$tcp = new TCP("192.168.65.9","1024","temp");
+			$tcp = new TCP("192.168.65.9","1024","temp\n");
 			$temperature=$tcp->RecupererResultat();
 			
 		}
@@ -15,7 +15,7 @@
 
 
 	<head>
-	<p>QU EST CE QUI DIT PAKPAK</P>
+	
 		<meta charset="UTF-8">
 	
 	

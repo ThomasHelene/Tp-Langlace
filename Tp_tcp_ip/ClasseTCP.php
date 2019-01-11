@@ -7,6 +7,7 @@ class TCP
 	private $Requete;
 	private $socket;
 	private $resultat;
+	private $EtatConnexion;
 	
 	
 	
@@ -23,21 +24,41 @@ class TCP
 		$this->socket = socket_create(AF_INET, SOCK_STREAM, 0);
 		
 		$this->Envoi();
-		$this->Reception();
-		$this->Deconnexion();
+		if($this->EtatConnexion==true)
+		{
+			$this->Reception();
+			$this->Deconnexion();
+		}
 		
 	}
 	
 	private function Envoi()
 	{
-		// Le Socket se connecte
-		$this->resultat = socket_connect($this->socket, $this->ip, $this->port);
 		
+		// On teste la connexion
+	
+					
+    error_reporting(E_ERROR | E_PARSE);
+				$bool=socket_connect($this->socket,$this->ip,$this->port);
+
+	
+					
+			
+		
+		if($bool==true)
+		{
+		$this->EtatConnexion=true;
 		// On écrit sur le Socket
 		socket_write($this->socket, $this->Requete, strlen($this->Requete));
 		
+		}
+		else
+		{
 			
-		
+			$this->EtatConnexion=false;
+			$this->resultat="N/A";
+			echo"Serveur Meteo non disponible";
+		}
 		
 	}
 	
@@ -45,7 +66,7 @@ class TCP
 	private function Reception()
 	{
 		
-		$this->resultat = socket_read ($this->socket,1024,PHP_NORMAL_READ) ;
+		$this->resultat = socket_read ($this->socket,2048,PHP_NORMAL_READ) ;
 		
 	
 	}
@@ -62,6 +83,12 @@ class TCP
 		
 			return $this->resultat;
 		
+	}
+	
+	public function RecupererEtatConnexion()
+	{
+		
+			return $this->EtatConnexion;
 	}
 	
 	
