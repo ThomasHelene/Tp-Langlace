@@ -30,7 +30,7 @@ object Form1: TForm1
   object LblTemp: TLabel
     Left = 299
     Top = 36
-    Width = 29
+    Width = 3
     Height = 13
   end
   object BtnConnexion: TButton

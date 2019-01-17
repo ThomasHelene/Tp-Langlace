@@ -11,14 +11,15 @@ class K8055
 
 		   int Temperature;
 		   bool EtatConnexion;
-
 		   void LectureTemperature(int Canal);
 
 	public:
 			 //Constructeur
 			K8055(int AdresseCarte);
+
 			//Destructeur
 			~K8055();
+
 			//Méthodes
 			bool GetEtatConnexion();
 			int GetTemperature(int Canal);

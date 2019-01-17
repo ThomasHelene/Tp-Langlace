@@ -1,0 +1,30 @@
+//---------------------------------------------------------------------------
+
+#ifndef CarteH
+#define CarteH
+#include "K8055D.h"
+//---------------------------------------------------------------------------
+
+class K8055
+{
+	private:
+
+		   int Temperature;
+		   bool EtatConnexion;
+
+		   void LectureTemperature(int Canal);
+
+	public:
+			 //Constructeur
+			K8055(int AdresseCarte);
+			//Destructeur
+			~K8055();
+			//Méthodes
+			bool GetEtatConnexion();
+			int GetTemperature(int Canal);
+};
+
+
+
+
+#endif
