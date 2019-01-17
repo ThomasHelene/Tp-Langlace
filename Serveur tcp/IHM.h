@@ -27,7 +27,7 @@ __published:	// Composants gérés par l'EDI
 	TMemo *MemoConnexions;
 	void __fastcall BtnServClick(TObject *Sender);
 	void __fastcall Timer1Timer(TObject *Sender);
-private: Serveur *serv;	// Déclarations utilisateur
+private: Serveur *serv; int nb;	// Déclarations utilisateur
 public:		// Déclarations utilisateur
 	__fastcall TForm1(TComponent* Owner);
 };

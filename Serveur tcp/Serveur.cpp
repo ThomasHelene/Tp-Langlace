@@ -7,7 +7,7 @@
 #pragma package(smart_init)
 
 
-
+ // Prépare le Serveur et prépare les événements
 Serveur::Serveur(TComponent* Owner,wchar_t * Ip, int Port)
 {
 	TCP=new TIdTCPServer(Owner);
@@ -23,15 +23,20 @@ Serveur::Serveur(TComponent* Owner,wchar_t * Ip, int Port)
 	TCP->OnDisconnect=Disconnect;
 
 }
+
+// Permet de récupérer la Température
 void Serveur::GetTemperature(int temp)
 {
    temperature=temp;
 }
+
+// Détruit l'objet indy de serveur indy
 Serveur::~Serveur()
 {
 	delete TCP;
 
 }
+//Lance le Serveur
 bool Serveur::Lancer()
 {
 
@@ -40,43 +45,44 @@ bool Serveur::Lancer()
 	  return true;
 
 }
-
+// Permet de savoir si le Client est connecté
 bool Serveur::GetEtatClient()
 {
 	return EtatConnexionClient ;
 
 }
 
-
+// Permet de récupérer la Requete du client
 String Serveur::Reception()
 {
 
 	return RequeteClient;
 }
 
+// S'execute lorsque que un client envoie temp\n\r
 void __fastcall Serveur::Execute(TIdContext* AContext)
 {
-		String test;
-		test=temperature;
-		test+="\n\r";
-		RequeteClient=AContext->Connection->Socket->ReadLn().w_str();
+		String temp;
+		temp=temperature;
+		temp+="\n\r";
+
+		RequeteClient=AContext->Connection->Socket->ReadLn().w_str(); // Lit le socket
+
 		if(RequeteClient == L"temp")
 		{
-
-				AContext->Connection->Socket->Write(test);
-
-
+			AContext->Connection->Socket->Write(temp); // Envoie la température récupérée précédemment   sur le socket
 		}
 
 	}
 
 
-
+// Lorsque un client se connecte , modifie l'attribut EtatConnexion
 void __fastcall Serveur::Connect(TIdContext* AContext)
 {
 	  EtatConnexionClient=true;
 }
 
+// Lorsque un client se déconnecte , modifie l'attribut EtatConnexion
 void __fastcall Serveur::Disconnect(TIdContext* AContext)
 {
 	  EtatConnexionClient=false;

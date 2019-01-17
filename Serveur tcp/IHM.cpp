@@ -32,6 +32,8 @@ Timer1->Enabled=true;
 //---------------------------------------------------------------------------
 void __fastcall TForm1::Timer1Timer(TObject *Sender)
 {
+// On vérifie si le client est toujours connecté.
+// On actualise du coup la couleur du cercle , en fonction de l'état de la connexion
 	if(serv->GetEtatClient()==true)
 	{
 	   Shape2->Brush->Color=clLime;
