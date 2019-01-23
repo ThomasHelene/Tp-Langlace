@@ -1,0 +1,47 @@
+//--------------------------------------------------------------------------//
+//----- Développé par Vuillemenot Kevin ------------------------------------//
+//----- Groupe : Valentini, Helene, Ranaldi, Vuillemenot -------------------//
+//----- Classe de BTS SN2 --------------------------------------------------//
+//----- Dans le cadre du projet météo --------------------------------------//
+//----- Classe Carte -------------------------------------------------------//
+//--------------------------------------------------------------------------//
+
+//---------------------------------------------------------------------------
+#ifndef CarteH
+#define CarteH
+#include "K8055D.h"
+//---------------------------------------------------------------------------
+
+class K8055
+{
+	private:
+
+			// Evénement
+		   int Temperature;
+
+		   // Méthode qui
+		   bool EtatConnexion;
+
+		   // Méthode qui
+		   void LectureTemperature(int Canal);
+
+
+	public:
+
+		//Constructeur
+		K8055(int AdresseCarte);
+
+		//Destructeur qui
+		~K8055();
+
+		// Méthode qui
+		bool GetEtatConnexion();
+
+		// Méthode qui
+		int GetTemperature(int Canal);
+};
+
+
+
+
+#endif

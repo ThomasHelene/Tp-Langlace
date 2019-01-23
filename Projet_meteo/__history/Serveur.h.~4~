@@ -1,0 +1,55 @@
+//--------------------------------------------------------------------------//
+//----- Développer par Vuillemenot Kevin -----------------------------------//
+//----- Groupe : Valentini, Helene, Ranaldi, Vuillemenot -------------------//
+//----- Classe de BTS SN2 --------------------------------------------------//
+//----- Dans le cadre du projet météo --------------------------------------//
+//----- Classe Serveur -----------------------------------------------------//
+//--------------------------------------------------------------------------//
+
+//---------------------------------------------------------------------------//
+#ifndef ServeurH
+#define ServeurH
+#include <vcl.h>
+#include <IdTCPServer.hpp>
+//---------------------------------------------------------------------------//
+
+
+class Serveur
+{
+
+	private:
+
+		bool EtatConnexionClient;
+		TIdTCPServer *TCP;
+		String RequeteClient;
+		int temperature;  	//Evenements
+
+		void  __fastcall Execute(TIdContext* AContext);
+
+		// retourne l'état vrai à la connexion serveur
+		void __fastcall Connect(TIdContext* AContext);
+
+		// retourne l'état faux à la connexion serveur
+		void __fastcall Serveur::Disconnect(TIdContext* AContext);
+
+
+	public:
+
+		Serveur(TComponent* Owner,wchar_t*IP,int Port);
+
+		// Deconnexion du serveur
+		~Serveur();
+
+		//
+		bool  Lancer();
+
+		// retourne l'état de la connexion avec le client
+		bool GetEtatClient();
+
+		// récupère la température
+		void GetTemperature(int temp);
+
+		String Reception();
+};
+
+#endif

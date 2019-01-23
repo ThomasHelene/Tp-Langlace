@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2019/01/14 13:15:39.000.687,=C:\Users\Thelene\Documents\Embarcadero\Studio\Projets\Unit1.cpp</Transaction>
+    <Transaction>2019/01/14 13:15:39.000.675,=C:\Users\Thelene\Documents\Embarcadero\Studio\Projets\Project1PCH1.h</Transaction>
+    <Transaction>2019/01/14 13:16:05.000.270,=E:\Projet Intégré\Carte.h</Transaction>
+    <Transaction>2019/01/14 13:16:05.000.305,=E:\Projet Intégré\IHM.cpp</Transaction>
+    <Transaction>2019/01/14 13:16:05.000.348,=E:\Projet Intégré\Serveur.h</Transaction>
+    <Transaction>2019/01/14 13:16:05.000.326,=E:\Projet Intégré\K8055D.h</Transaction>
+    <Transaction>2019/01/14 13:16:05.000.334,=E:\Projet Intégré\k8055d.lib</Transaction>
+    <Transaction>2019/01/14 13:16:05.000.315,=E:\Projet Intégré\IHM.h</Transaction>
+    <Transaction>2019/01/14 13:16:05.000.310,=E:\Projet Intégré\IHM.dfm</Transaction>
+    <Transaction>2019/01/14 13:16:05.000.341,=E:\Projet Intégré\Serveur.cpp</Transaction>
+    <Transaction>2019/01/14 13:16:05.000.266,=E:\Projet Intégré\Carte.cpp</Transaction>
+    <Transaction>2019/01/14 13:16:11.000.888,C:\Users\Thelene\Documents\Embarcadero\Studio\Projets\Project1.cbproj=E:\Projet Intégré\Project1.cbproj</Transaction>
+    <Transaction>2019/01/14 13:16:11.000.202,C:\Users\Thelene\Documents\Embarcadero\Studio\Projets\Project1PCH1.h=E:\Projet Intégré\Project1PCH1.h</Transaction>
+  </Transactions>
+	<ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="Carte.cpp"/>
+    <File Path="Carte.cpp"/>
+    <File Path="Carte.h"/>
+    <File Path="Carte.h"/>
+    <File Path="IHM.cpp"/>
+    <File Path="IHM.cpp"/>
+    <File Path="IHM.dfm"/>
+    <File Path="IHM.h"/>
+    <File Path="IHM.dfm"/>
+    <File Path="IHM.h"/>
+    <File Path="K8055D.h"/>
+    <File Path="k8055d.lib"/>
+    <File Path="Project1.cpp"/>
+    <File Path="Project1PCH1.h"/>
+    <File Path="Serveur.cpp"/>
+    <File Path="Serveur.h"/>
+  </ProjectSortOrder>
+</BorlandProject>
